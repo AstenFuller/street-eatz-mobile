@@ -9,7 +9,7 @@ class Register extends Component {
     state = {
         email: '',
         password: '',
-        confirmPassword: '',
+        confirmedPassword: '',
         phoneNumber: '',
         name: '',
         value: ''
@@ -23,7 +23,7 @@ class Register extends Component {
     handleTextChange = newText => this.setState({ value: newText });
  
     registerUser = (name, phoneNumber, email, password) => {
-        if(this.state.password != this.state.confirmPassword) {
+        if(this.state.password != this.state.confirmedPassword) {
             alert('Your passwords do not match');
             return;
         } else {
